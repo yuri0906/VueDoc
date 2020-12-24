@@ -7,7 +7,7 @@ services:
     volumes:
       - ./node:/node
     working_dir: /node
-    command: ["npm", "start"]
+    command: ["./node_modules/.bin/nodemon", "app"]
     ports:
       - "3000:3000"
   vue:
