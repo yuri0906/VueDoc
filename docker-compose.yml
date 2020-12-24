@@ -1,0 +1,22 @@
+version: "3"
+services:
+  node:
+    build: 
+      context: ./node
+      dockerfile: Dockerfile
+    volumes:
+      - ./node:/node
+    working_dir: /node
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
+  vue:
+    build: 
+      context: ./vue
+      dockerfile: Dockerfile
+    volumes:
+      - ./vue:/vue
+    working_dir: /vue/frontapp
+    command: ["npm", "run", "serve"]
+    ports:
+      - "8080:8080"
