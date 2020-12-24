@@ -1,13 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+const { convertToRankingdata } = require("./api/convertToRankingdata"); 
+
 router.get('/', async function(req, res, next) {
-  try{
-    res.send("hello docker");
-  }catch(error){
-    res.status(500).send(err);
-  }
+  const ranking = await convertToRankingdata(req.body.text)
+    .then(result => {
+      return result;
+    })
+    .catch(err =>{
+      return err;
+    })
+  res.send(ranking);
 });
 
 module.exports = router;
