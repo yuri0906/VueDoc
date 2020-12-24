@@ -13,10 +13,10 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Methods from '../server/methods';
-import InputWord from '@/components/InputWord.vue';
-import LoadingDisplay from '@/components/LoadingDisplay.vue'
-import WordsRanking from '@/components/WordsRanking.vue';
-import BarGraph from '@/components/BarGraph.vue';
+import InputWord from '../components/InputWord.vue';
+import LoadingDisplay from '../components/LoadingDisplay.vue'
+import WordsRanking from '../components/WordsRanking.vue';
+import BarGraph from '../components/BarGraph.vue';
 
 @Component({
     components: {

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component,Prop,Vue, Watch } from "vue-property-decorator";
-import BarChart from "@/components/BarChart.vue";
+import BarChart from "../components/BarChart.vue";
 import Chart from "chart.js";
 
 @Component({

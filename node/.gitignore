@@ -1,4 +1,5 @@
-node_modules/
-public/
-views/
-secret/
+node_modules
+public
+views
+secret
+bin
