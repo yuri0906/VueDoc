@@ -32,7 +32,6 @@ export default class AppPage extends Vue  {
     private async fetchRankingData(input:string){
         this.isLoading = true;
         this.isShow = false; //２回目以降で前回の検索結果を隠す
-        console.log(input)
         if(!input){ //入力が空欄の場合
             alert("キーワードを入力してください");
         }else if(input.length > 64){ //64文字以上の場合
