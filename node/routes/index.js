@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { convertToRankingdata } = require("./api/convertToRankingdata"); 
+const { convertToRankingdata } = require("../api/convertToRankingdata"); 
 
 router.get('/', async function(req, res, next) {
   const ranking = await convertToRankingdata(req.body.text)

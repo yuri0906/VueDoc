@@ -20,7 +20,7 @@ export default class WordsRanking extends Vue  {
     }
     
     private get ranking(){
-        let count = 0; //同率存在ケースのカウント
+        let count = 0; 
         const rank = this.top10.map((currentItem,index)=>{
             const preItem = this.top10[index-1];			
             if(index>0 && currentItem.score===preItem.score){

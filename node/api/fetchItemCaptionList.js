@@ -1,10 +1,6 @@
-/*
-検索キーワードにヒットした商品の説明文のリストを生成する
-*/
-
 const axios = require("axios"); 
 const _ = require("lodash")
-const rakuten = require("../secret/rakuten"); //楽天APIのIDとURL
+const rakuten = require("../secret/rakuten"); 
 
 exports.fetchItemCaptionList = async(keyword) => { 
     const result = await axios.get(rakuten.apiURL,{
@@ -21,7 +17,7 @@ exports.fetchItemCaptionList = async(keyword) => {
 
     const itemCaptionList = _.reduce(items,(result,item)=>{
         let itemCaption = item.Item["itemCaption"]; 
-        if(!itemCaption){ //空文判定
+        if(!itemCaption){ 
             return result;
         }
         result.push(itemCaption);
